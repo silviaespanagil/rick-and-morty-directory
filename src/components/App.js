@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 //SERVICES
 import ApiFetch from "../services/ApiFetch.js";
 import ls from "../services/LocalStorage.js";
 //COMPONENTS
 import CharacterList from "./CharacterList.js";
+import CharacterDetail from "./CharacterDetail.js";
+import NoCharacterDetail from "./NoCharacterDetail.js";
 import FilterByName from "./FilterByName.js";
 import Reset from "./Reset.js";
 //STYLESHEETS
@@ -44,16 +47,39 @@ const App = () => {
   };
 
   //RENDER FUNCTIONS
+
   //Filter
   const renderFilter = characters.filter((character) => {
     return character.name.toUpperCase().includes(FilterName.toUpperCase());
   });
 
+  if (renderFilter.length === 0) {
+    return <p>No existe</p>;
+  }
+
+  //Detail
+  const renderCharacterDetail = (routerProps) => {
+    const routerId = routerProps.match.params.id;
+    const characterFound = characters.find(
+      (character) => character.id === parseInt(routerId)
+    );
+    if (characterFound) {
+      return <CharacterDetail character={characterFound} />;
+    } else {
+      return <NoCharacterDetail />;
+    }
+  };
+
   return (
     <>
-      <Reset reset={handleReset} />
-      <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
-      <CharacterList characters={renderFilter} />
+      <Switch>
+        <Route exact path="/">
+          <Reset reset={handleReset} />
+          <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
+          <CharacterList characters={renderFilter} />
+        </Route>
+        <Route path="/character/:id" render={renderCharacterDetail} />
+      </Switch>
     </>
   );
 };

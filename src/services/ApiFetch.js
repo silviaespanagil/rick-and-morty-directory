@@ -6,7 +6,7 @@ const ApiFetch = () => {
     .then((data) => {
       const cleanData = data.results.map((character) => {
         return {
-          id: parseInt(character.id),
+          id: character.id,
           image: character.image,
           name: character.name,
           status: character.status,
