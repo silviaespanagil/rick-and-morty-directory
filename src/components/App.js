@@ -7,6 +7,7 @@ import ls from "../services/LocalStorage.js";
 import CharacterList from "./CharacterList.js";
 import CharacterDetail from "./CharacterDetail.js";
 import NoCharacterDetail from "./NoCharacterDetail.js";
+import NoResults from "./NoResults.js";
 import FilterByName from "./FilterByName.js";
 import Reset from "./Reset.js";
 //STYLESHEETS
@@ -54,7 +55,7 @@ const App = () => {
   });
 
   if (renderFilter.length === 0) {
-    return <p>No existe</p>;
+    return <NoResults reset={handleReset} />;
   }
 
   //Detail
