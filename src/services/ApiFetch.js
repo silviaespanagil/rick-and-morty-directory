@@ -6,10 +6,13 @@ const ApiFetch = () => {
     .then((data) => {
       const cleanData = data.results.map((character) => {
         return {
-          character,
+          name: character.name,
+          status: character.status,
+          specie: character.species,
+          origin: character.origin.name,
         };
       });
-      return cleanData;
+      return console.log(cleanData);
     });
 };
 
