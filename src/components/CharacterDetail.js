@@ -1,5 +1,14 @@
-const CharacterDetail = () => {
-  return <p>Esto es un detalle</p>;
+const CharacterDetail = (props) => {
+  return (
+    <article>
+      <img src={props.character.image} alt={props.character.name} />
+      <h2>{props.character.name}</h2>
+      <p>{props.character.species}</p>
+      <p>Comes from {props.character.origin}</p>
+      <p>It's {props.character.status}</p>
+      <p>{props.character.episode}</p>
+    </article>
+  );
 };
 
 export default CharacterDetail;

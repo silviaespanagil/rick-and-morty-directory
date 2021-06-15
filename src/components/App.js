@@ -20,6 +20,7 @@ const App = () => {
   const [characters, setCharacters] = useState(localCharacter);
   const [FilterName, setFilterByName] = useState(localSearch);
 
+  console.log(characters);
   //FETCH
   useEffect(() => {
     if (localCharacter.length === 0) {
@@ -65,6 +66,7 @@ const App = () => {
       (character) => character.id === parseInt(routerId)
     );
     if (characterFound) {
+      console.log(characterFound);
       return <CharacterDetail character={characterFound} />;
     } else {
       return <NoCharacterDetail />;

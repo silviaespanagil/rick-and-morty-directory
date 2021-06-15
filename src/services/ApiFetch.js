@@ -12,6 +12,7 @@ const ApiFetch = () => {
           status: character.status,
           species: character.species,
           origin: character.origin.name,
+          episode: character.episode.length,
         };
       });
 
