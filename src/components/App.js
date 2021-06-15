@@ -5,6 +5,7 @@ import ls from "../services/LocalStorage.js";
 //COMPONENTS
 import CharacterList from "./CharacterList.js";
 import FilterByName from "./FilterByName.js";
+import Reset from "./Reset.js";
 //STYLESHEETS
 import "../stylesheets/App.scss";
 
@@ -30,20 +31,27 @@ const App = () => {
     ls.set("filter", FilterName);
   });
 
-  //HANDLE FILTER
+  //HANDLER FUNCTIONS
+  //Filter
   const handleFilter = (characterData) => {
     if (characterData.key === "name") {
       setFilterByName(characterData.searchValue);
     }
   };
+  //Reset
+  const handleReset = () => {
+    setFilterByName("");
+  };
 
-  //RENDER FILTER
+  //RENDER FUNCTIONS
+  //Filter
   const renderFilter = characters.filter((character) => {
     return character.name.toUpperCase().includes(FilterName.toUpperCase());
   });
 
   return (
     <>
+      <Reset reset={handleReset} />
       <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
       <CharacterList characters={renderFilter} />
     </>
