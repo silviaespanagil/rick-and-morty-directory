@@ -7,10 +7,11 @@ const ApiFetch = () => {
       const cleanData = data.results.map((character) => {
         console.log(character);
         return {
-          id: character.id,
+          id: parseInt(character.id),
+          image: character.image,
           name: character.name,
           status: character.status,
-          specie: character.species,
+          species: character.species,
           origin: character.origin.name,
         };
       });
