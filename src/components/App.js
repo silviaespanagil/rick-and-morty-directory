@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 //SERVICES
- import ApiFetch from "../services/ApiFetch.js";
+import ApiFetch from "../services/ApiFetch.js";
+//COMPONENTS
+import CharacterList from "./CharacterList.js";
 //STYLESHEETS
 import "../stylesheets/App.scss";
 
@@ -15,7 +17,7 @@ const App = () => {
     });
   }, []);
   console.log(characters);
-  return <p>Hola mundo</p>;
+  return <CharacterList />;
 };
 
 export default App;
