@@ -13,6 +13,7 @@ const CharacterList = (props) => {
       </li>
     );
   });
+
   return (
     <>
       <ul>{character}</ul>

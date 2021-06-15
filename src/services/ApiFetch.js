@@ -5,7 +5,6 @@ const ApiFetch = () => {
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.results.map((character) => {
-        console.log(character);
         return {
           id: parseInt(character.id),
           image: character.image,
@@ -15,6 +14,7 @@ const ApiFetch = () => {
           origin: character.origin.name,
         };
       });
+
       return cleanData;
     });
 };
