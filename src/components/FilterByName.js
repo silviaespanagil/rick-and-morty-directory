@@ -16,6 +16,7 @@ const FilterByName = (props) => {
         placeholder="Rick"
         id="SearchBox"
         type="text"
+        value={props.lsFilter}
         onChange={handleSearchBox}
       />
     </form>

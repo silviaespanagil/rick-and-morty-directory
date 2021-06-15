@@ -10,9 +10,10 @@ import "../stylesheets/App.scss";
 
 const App = () => {
   const localCharacter = ls.get("character", []);
+  const localSearch = ls.get("filter", "");
   //ESTADOS
   const [characters, setCharacters] = useState(localCharacter);
-  const [FilterName, setFilterByName] = useState("");
+  const [FilterName, setFilterByName] = useState(localSearch);
 
   //FETCH
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
   //LOCAL STORAGE
   useEffect(() => {
     ls.set("character", characters);
+    ls.set("filter", FilterName);
   });
 
   //HANDLE FILTER
@@ -42,7 +44,7 @@ const App = () => {
 
   return (
     <>
-      <FilterByName handleFilter={handleFilter} />
+      <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
       <CharacterList characters={renderFilter} />
     </>
   );
