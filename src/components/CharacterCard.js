@@ -1,5 +1,5 @@
-const CharacterCard = () => {
-  return <p>Esto es una lista</p>;
+const CharacterCard = (props) => {
+  return <p>{props.name}</p>;
 };
 
 export default CharacterCard;

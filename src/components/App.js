@@ -17,7 +17,7 @@ const App = () => {
     });
   }, []);
   console.log(characters);
-  return <CharacterList />;
+  return <CharacterList characters={characters} />;
 };
 
 export default App;
