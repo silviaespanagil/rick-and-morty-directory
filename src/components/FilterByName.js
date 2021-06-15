@@ -1,12 +1,23 @@
-const FilterByName = () => {
+const FilterByName = (props) => {
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
   const handleSearchBox = (ev) => {
-    const searchValue = ev.currentTarget.value;
-    return console.log(searchValue);
+    props.handleFilter({
+      searchValue: ev.target.value,
+      key: "name",
+    });
   };
   return (
-    <form>
-      <label forHtml="searchBox"></label>
-      <input id="SearchBox" type="text" onChange={handleSearchBox} />
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="searchBox"></label>
+      <input
+        placeholder="Rick"
+        id="SearchBox"
+        type="text"
+        onChange={handleSearchBox}
+      />
     </form>
   );
 };

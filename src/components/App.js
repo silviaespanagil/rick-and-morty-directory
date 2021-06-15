@@ -12,6 +12,7 @@ const App = () => {
   const localCharacter = ls.get("character", []);
   //ESTADOS
   const [characters, setCharacters] = useState(localCharacter);
+  const [FilterName, setFilterByName] = useState("");
 
   //FETCH
   useEffect(() => {
@@ -27,10 +28,22 @@ const App = () => {
     ls.set("character", characters);
   });
 
+  //HANDLE FILTER
+  const handleFilter = (characterData) => {
+    if (characterData.key === "name") {
+      setFilterByName(characterData.searchValue);
+    }
+  };
+
+  //RENDER FILTER
+  const renderFilter = characters.filter((character) => {
+    return character.name.toUpperCase().includes(FilterName.toUpperCase());
+  });
+
   return (
     <>
-      <FilterByName />
-      <CharacterList characters={characters} />
+      <FilterByName handleFilter={handleFilter} />
+      <CharacterList characters={renderFilter} />
     </>
   );
 };
