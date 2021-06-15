@@ -5,7 +5,12 @@ const ApiFetch = () => {
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.results.map((character) => {
-        return console.log(cleanData);
+        return {
+          character,
+        };
       });
+      return cleanData;
     });
 };
+
+export default ApiFetch;
