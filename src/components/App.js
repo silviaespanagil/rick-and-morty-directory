@@ -10,6 +10,7 @@ import CharacterList from "./CharacterList.js";
 import CharacterDetail from "./CharacterDetail.js";
 import NoCharacterDetail from "./NoCharacterDetail.js";
 import FilterByName from "./FilterByName.js";
+import FilterBySpecies from "./FilterBySpecies.js";
 import Reset from "./Reset.js";
 //STYLESHEETS
 import "../stylesheets/App.scss";
@@ -17,11 +18,11 @@ import "../stylesheets/App.scss";
 const App = () => {
   const localCharacter = ls.get("character", []);
   const localSearch = ls.get("filter", "");
+
   //ESTADOS
   const [characters, setCharacters] = useState(localCharacter);
   const [FilterName, setFilterByName] = useState(localSearch);
 
-  console.log(characters);
   //FETCH
   useEffect(() => {
     if (localCharacter.length === 0) {
@@ -41,12 +42,15 @@ const App = () => {
   });
 
   //HANDLER FUNCTIONS
+
   //Filter
+
   const handleFilter = (characterData) => {
     if (characterData.key === "name") {
       setFilterByName(characterData.searchValue);
     }
   };
+
   //Reset
   const handleReset = () => {
     setFilterByName("");
@@ -84,6 +88,7 @@ const App = () => {
           <div className="filter">
             <Reset reset={handleReset} />
             <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
+            <FilterBySpecies />
           </div>
           <CharacterList filterName={FilterName} characters={renderFilter} />
         </Route>
