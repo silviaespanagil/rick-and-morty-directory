@@ -1,0 +1,16 @@
+.noResults {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  &__img {
+    width: 500px;
+  }
+  &__text {
+    font-size: 1.5rem;
+    &-input {
+      font-weight: bold;
+    }
+  }
+}

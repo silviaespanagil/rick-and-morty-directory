@@ -7,8 +7,10 @@ const CharacterCard = (props) => {
           src={props.image}
           alt={props.name}
         />
-        <h2>{props.name}</h2>
-        <p>{props.species}</p>
+        <div className="character__li--article-info">
+          <h2>{props.name}</h2>
+          <p>{props.species}</p>
+        </div>
       </article>
     </>
   );

@@ -3,6 +3,8 @@ import { Route, Switch } from "react-router-dom";
 //SERVICES
 import ApiFetch from "../services/ApiFetch.js";
 import ls from "../services/LocalStorage.js";
+//IMAGES
+import logo from "../images/RickAndMorty.png";
 //COMPONENTS
 import CharacterList from "./CharacterList.js";
 import CharacterDetail from "./CharacterDetail.js";
@@ -71,6 +73,9 @@ const App = () => {
 
   return (
     <>
+      <div className="logo">
+        <img className="logo__img" src={logo} alt="Rick and Morty" />
+      </div>
       <Switch>
         <Route exact path="/">
           <div className="filter">
