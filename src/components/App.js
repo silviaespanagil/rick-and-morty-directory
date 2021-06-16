@@ -26,7 +26,10 @@ const App = () => {
   useEffect(() => {
     if (localCharacter.length === 0) {
       ApiFetch().then((character) => {
-        setCharacters(character);
+        const orderCharacter = character.sort((a, b) =>
+          a.name > b.name ? 1 : a.name < b.name ? -1 : 0
+        );
+        setCharacters(orderCharacter);
       });
     }
   }, [localCharacter]);
