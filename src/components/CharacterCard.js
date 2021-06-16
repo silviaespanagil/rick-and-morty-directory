@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const CharacterCard = (props) => {
   return (
     <>
@@ -17,3 +19,5 @@ const CharacterCard = (props) => {
 };
 
 export default CharacterCard;
+
+CharacterCard.propTypes = {};
