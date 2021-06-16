@@ -5,10 +5,14 @@ const NoCharacterDetail = () => {
   return (
     <>
       <Link to="/">
-        <p className="back">↩ Volver</p>
+        <p className="noCharacterBack">↩ Volver</p>
       </Link>
-      <img src={existNot} alt="error 404" />
-      <p>This page does not exist...but do we?</p>
+      <div className="noCharacter">
+        <p className="noCharacter__text">
+          This page does not exist...but do we?
+        </p>
+        <img className="noCharacter__img" src={existNot} alt="error 404" />
+      </div>
     </>
   );
 };

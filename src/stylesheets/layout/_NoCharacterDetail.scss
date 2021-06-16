@@ -1,0 +1,13 @@
+.noCharacterBack {
+  padding-left: 25px;
+}
+
+.noCharacter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  &__text {
+    font-size: 1.5rem;
+  }
+}
