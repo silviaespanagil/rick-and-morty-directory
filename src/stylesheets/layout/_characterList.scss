@@ -2,10 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet() {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    justify-content: center;
+  }
+  @include desktop() {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   &__li {
     border-radius: 15px;
-    box-shadow: 5px 5px 10px $colorDarkBlue;
     margin-top: 25px;
+
     &:hover {
       transform: scale(1.02);
       box-shadow: 8x 8px 10px $colorNeonGreen;
@@ -13,11 +24,25 @@
     &--article {
       border: 4px solid $colorBlue;
       border-radius: 15px;
+      box-shadow: 5px 5px 10px $colorDarkBlue;
+
+      @include tablet() {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+      }
+
       &-img {
         border-radius: 11px;
+        @include tablet() {
+        }
       }
       &-info {
         padding: 15px;
+        &-name {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -27,13 +52,13 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 25px 0 10px 25px;
   width: 100%;
   &__resetBut {
     font-weight: bold;
     color: $colorBlack;
-    margin-right: 25px;
+    margin: 0 25px;
     background-color: $colorNeonGreen;
     border-radius: 10px;
     height: 30px;
@@ -58,6 +83,9 @@
       border-bottom: 2px dotted $colorBlue;
       width: 300px;
       height: 40px;
+      @include tablet() {
+        width: 500px;
+      }
     }
   }
 }

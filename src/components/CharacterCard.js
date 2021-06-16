@@ -8,7 +8,7 @@ const CharacterCard = (props) => {
           alt={props.name}
         />
         <div className="character__li--article-info">
-          <h2>{props.name}</h2>
+          <h2 className="character__li--article-info-name">{props.name}</h2>
           <p>{props.species}</p>
         </div>
       </article>
