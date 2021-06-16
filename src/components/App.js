@@ -5,11 +5,13 @@ import ApiFetch from "../services/ApiFetch.js";
 import ls from "../services/LocalStorage.js";
 //IMAGES
 import logo from "../images/RickAndMorty.png";
+
 //COMPONENTS
 import CharacterList from "./CharacterList.js";
 import CharacterDetail from "./CharacterDetail.js";
 import NoCharacterDetail from "./NoCharacterDetail.js";
 import Filters from "./Filters.js";
+import Footer from "./Footer.js";
 import Reset from "./Reset.js";
 //STYLESHEETS
 import "../stylesheets/App.scss";
@@ -109,6 +111,7 @@ const App = () => {
           <Route path="/character/:id" render={renderCharacterDetail} />
         </Switch>
       </main>
+      <Footer />
     </>
   );
 };

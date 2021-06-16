@@ -1,0 +1,13 @@
+.footer {
+  border-top: 2px dotted $colorDarkBlue;
+  margin-top: 50px;
+  padding-right: 25px;
+  width: 96vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &__img {
+    width: 25px;
+  }
+}
