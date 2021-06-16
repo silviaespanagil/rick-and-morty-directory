@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const FilterByName = (props) => {
   const handleSearchBox = (ev) => {
     props.handleFilter({
@@ -22,3 +24,8 @@ const FilterByName = (props) => {
 };
 
 export default FilterByName;
+
+FilterByName.propTypes = {
+  handleFilter: PropTypes.func,
+  lsFilter: PropTypes.string,
+};

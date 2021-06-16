@@ -20,4 +20,8 @@ const CharacterCard = (props) => {
 
 export default CharacterCard;
 
-CharacterCard.propTypes = {};
+CharacterCard.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  species: PropTypes.string,
+};

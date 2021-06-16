@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 //COMPONENTES
 import CharacterCard from "./CharacterCard.js";
@@ -29,3 +30,8 @@ const CharacterList = (props) => {
 };
 
 export default CharacterList;
+
+CharacterList.propTypes = {
+  characters: PropTypes.array,
+  filterName: PropTypes.string,
+};

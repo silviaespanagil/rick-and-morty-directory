@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 
@@ -10,7 +11,7 @@ const Filters = (props) => {
       <form className="filter__form" onSubmit={handleSubmit}>
         <FilterByName
           handleFilter={props.handleFilter}
-          lsFilter={props.FilterName}
+          lsFilter={props.lsFilter}
         />
         <FilterBySpecies handleFilter={props.handleFilter} />
       </form>
@@ -18,3 +19,8 @@ const Filters = (props) => {
   );
 };
 export default Filters;
+
+Filters.propTypes = {
+  handleFilter: PropTypes.func,
+  lsFilter: PropTypes.string,
+};

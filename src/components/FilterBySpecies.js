@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const FilterBySpecies = (props) => {
   const handleSpecie = (ev) => {
     props.handleFilter({ specieValue: ev.target.value, key: "specie" });
@@ -23,3 +25,7 @@ const FilterBySpecies = (props) => {
 };
 
 export default FilterBySpecies;
+
+FilterBySpecies.propTypes = {
+  handleFilter: PropTypes.func,
+};

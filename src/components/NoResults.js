@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import portal from "../images/portal.gif";
 
 const NoResults = (props) => {
@@ -15,3 +16,7 @@ const NoResults = (props) => {
 };
 
 export default NoResults;
+
+NoResults.propTypes = {
+  filterName: PropTypes.string,
+};
