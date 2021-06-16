@@ -94,19 +94,21 @@ const App = () => {
 
   return (
     <>
-      <div className="logo">
+      <header className="logo">
         <img className="logo__img" src={logo} alt="Rick and Morty" />
-      </div>
-      <Switch>
-        <Route exact path="/">
-          <div className="filter">
-            <Reset reset={handleReset} />
-            <Filters handleFilter={handleFilter} lsFilter={FilterName} />
-          </div>
-          <CharacterList filterName={FilterName} characters={renderFilter} />
-        </Route>
-        <Route path="/character/:id" render={renderCharacterDetail} />
-      </Switch>
+      </header>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <div className="filter">
+              <Reset reset={handleReset} />
+              <Filters handleFilter={handleFilter} lsFilter={FilterName} />
+            </div>
+            <CharacterList filterName={FilterName} characters={renderFilter} />
+          </Route>
+          <Route path="/character/:id" render={renderCharacterDetail} />
+        </Switch>
+      </main>
     </>
   );
 };

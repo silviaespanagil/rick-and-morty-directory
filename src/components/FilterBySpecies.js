@@ -5,8 +5,15 @@ const FilterBySpecies = (props) => {
 
   return (
     <>
-      <label htmlFor="filterSpecies">Specie</label>
-      <select id="filterSpecies" name="filterSpecies" onChange={handleSpecie}>
+      <label htmlFor="filterSpecies" className="filter__form--species">
+        Specie
+      </label>
+      <select
+        id="filterSpecies"
+        className="filter__form--select"
+        name="filterSpecies"
+        onChange={handleSpecie}
+      >
         <option value="All">All</option>
         <option value="Alien">Alien</option>
         <option value="Human">Human</option>
