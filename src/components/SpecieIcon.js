@@ -1,14 +1,16 @@
-const alien = (
-  <span className="icons" title="Alien">
-    👽
-  </span>
-);
-const human = <i title="Human" className="fas fa-user icons"></i>;
-const unknown = (
-  <i title="Who knows what it is" className=" icons fas fa-question"></i>
-);
+import PropTypes from "prop-types";
 
 const SpecieIcon = (props) => {
+  const alien = (
+    <span className="icons" title="Alien">
+      👽
+    </span>
+  );
+  const human = <i title="Human" className="fas fa-user icons"></i>;
+  const unknown = (
+    <i title="Who knows what it is" className=" icons fas fa-question"></i>
+  );
+
   const specieIs = (specie) => {
     if (specie.toLowerCase() === "human") {
       return human;
@@ -22,3 +24,7 @@ const SpecieIcon = (props) => {
 };
 
 export default SpecieIcon;
+
+SpecieIcon.propTypes = {
+  specie: PropTypes.string,
+};

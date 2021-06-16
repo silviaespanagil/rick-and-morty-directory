@@ -1,10 +1,12 @@
-const dead = <i title="Dead" className="icons fas fa-skull icons"></i>;
-const alive = <i title="Alive" className=" icons fas fa-heartbeat "></i>;
-const unknown = (
-  <i title="May be alive...or not" className=" icons fas fa-question"></i>
-);
+import PropTypes from "prop-types";
 
 const DeadOrAliveIcon = (props) => {
+  const dead = <i title="Dead" className="icons fas fa-skull icons"></i>;
+  const alive = <i title="Alive" className=" icons fas fa-heartbeat "></i>;
+  const unknown = (
+    <i title="May be alive...or not" className=" icons fas fa-question"></i>
+  );
+
   const isAlive = (status) => {
     if (status.toLowerCase() === "dead") {
       return dead;
@@ -17,3 +19,7 @@ const DeadOrAliveIcon = (props) => {
   return <>{isAlive(props.status)}</>;
 };
 export default DeadOrAliveIcon;
+
+DeadOrAliveIcon.propTypes = {
+  status: PropTypes.string,
+};

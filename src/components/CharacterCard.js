@@ -27,5 +27,6 @@ export default CharacterCard;
 CharacterCard.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
+  status: PropTypes.string,
   species: PropTypes.string,
 };
