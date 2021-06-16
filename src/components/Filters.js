@@ -13,7 +13,10 @@ const Filters = (props) => {
           handleFilter={props.handleFilter}
           lsFilter={props.lsFilter}
         />
-        <FilterBySpecies handleFilter={props.handleFilter} />
+        <FilterBySpecies
+          handleFilter={props.handleFilter}
+          lsSpecie={props.lsSpecie}
+        />
       </form>
     </>
   );

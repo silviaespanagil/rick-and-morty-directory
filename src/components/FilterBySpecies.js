@@ -15,6 +15,7 @@ const FilterBySpecies = (props) => {
         className="filter__form--select"
         name="filterSpecies"
         onChange={handleSpecie}
+        value={props.lsSpecie}
       >
         <option value="All">All</option>
         <option value="Alien">Alien</option>

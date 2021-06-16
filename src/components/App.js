@@ -104,11 +104,18 @@ const App = () => {
           <Route exact path="/">
             <div className="filter">
               <Reset reset={handleReset} />
-              <Filters handleFilter={handleFilter} lsFilter={FilterName} />
+              <Filters
+                handleFilter={handleFilter}
+                lsFilter={FilterName}
+                lsSpecie={FilterSpecie}
+              />
             </div>
             <CharacterList filterName={FilterName} characters={renderFilter} />
           </Route>
           <Route path="/character/:id" render={renderCharacterDetail} />
+          <Route>
+            <NoCharacterDetail />
+          </Route>
         </Switch>
       </main>
       <Footer />
