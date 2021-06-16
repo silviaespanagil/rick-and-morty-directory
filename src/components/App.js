@@ -9,21 +9,23 @@ import logo from "../images/RickAndMorty.png";
 import CharacterList from "./CharacterList.js";
 import CharacterDetail from "./CharacterDetail.js";
 import NoCharacterDetail from "./NoCharacterDetail.js";
-import FilterByName from "./FilterByName.js";
-import FilterBySpecies from "./FilterBySpecies.js";
+import Filters from "./Filters.js";
 import Reset from "./Reset.js";
 //STYLESHEETS
 import "../stylesheets/App.scss";
 
 const App = () => {
   const localCharacter = ls.get("character", []);
-  const localSearch = ls.get("filter", "");
+  const localSearchName = ls.get("Filter name:", "");
+  const localSearchSpecie = ls.get("Filter specie:", "All");
 
   //ESTADOS
   const [characters, setCharacters] = useState(localCharacter);
-  const [FilterName, setFilterByName] = useState(localSearch);
+  const [FilterName, setFilterByName] = useState(localSearchName);
+  const [FilterSpecie, setFilterSpecie] = useState(localSearchSpecie);
 
   //FETCH
+
   useEffect(() => {
     if (localCharacter.length === 0) {
       ApiFetch().then((character) => {
@@ -36,9 +38,11 @@ const App = () => {
   }, [localCharacter]);
 
   //LOCAL STORAGE
+
   useEffect(() => {
     ls.set("character", characters);
-    ls.set("filter", FilterName);
+    ls.set("Filter name:", FilterName);
+    ls.set("Filter specie;", FilterSpecie);
   });
 
   //HANDLER FUNCTIONS
@@ -48,6 +52,8 @@ const App = () => {
   const handleFilter = (characterData) => {
     if (characterData.key === "name") {
       setFilterByName(characterData.searchValue);
+    } else if (characterData.key === "specie") {
+      setFilterSpecie(characterData.specieValue);
     }
   };
 
@@ -59,12 +65,20 @@ const App = () => {
   //RENDER FUNCTIONS
 
   //Filter
-  const renderFilter = characters.filter((character) => {
-    return character.name.toUpperCase().includes(FilterName.toUpperCase());
-  });
+  const renderFilter = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(FilterName.toUpperCase());
+    })
+    .filter((character) => {
+      if (FilterSpecie === "All") {
+        return true;
+      } else {
+        return character.species === FilterSpecie;
+      }
+    });
 
-  console.log(FilterName);
   //Detail
+
   const renderCharacterDetail = (routerProps) => {
     const routerId = routerProps.match.params.id;
     const characterFound = characters.find(
@@ -87,8 +101,7 @@ const App = () => {
         <Route exact path="/">
           <div className="filter">
             <Reset reset={handleReset} />
-            <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
-            <FilterBySpecies />
+            <Filters handleFilter={handleFilter} lsFilter={FilterName} />
           </div>
           <CharacterList filterName={FilterName} characters={renderFilter} />
         </Route>

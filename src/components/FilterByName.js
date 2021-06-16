@@ -1,8 +1,4 @@
 const FilterByName = (props) => {
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-  };
-
   const handleSearchBox = (ev) => {
     props.handleFilter({
       searchValue: ev.target.value,
@@ -10,8 +6,9 @@ const FilterByName = (props) => {
     });
   };
   return (
-    <form className="filter__form" onSubmit={handleSubmit}>
+    <>
       <label htmlFor="searchBox"></label>
+
       <input
         className="filter__form--textBox"
         placeholder="Rick"
@@ -20,7 +17,7 @@ const FilterByName = (props) => {
         value={props.lsFilter}
         onChange={handleSearchBox}
       />
-    </form>
+    </>
   );
 };
 

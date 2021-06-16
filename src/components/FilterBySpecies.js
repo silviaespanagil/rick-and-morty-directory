@@ -1,9 +1,8 @@
-const FilterBySpecies = () => {
+const FilterBySpecies = (props) => {
   const handleSpecie = (ev) => {
-    debugger;
-    const specie = ev.target.value;
-    return console.log(specie);
+    props.handleFilter({ specieValue: ev.target.value, key: "specie" });
   };
+
   return (
     <>
       <label htmlFor="filterSpecies">Specie</label>
