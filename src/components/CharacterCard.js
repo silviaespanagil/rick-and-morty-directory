@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import DeadOrAlive from "./DeadOrAlive.js";
 
 const CharacterCard = (props) => {
   return (
@@ -12,6 +13,7 @@ const CharacterCard = (props) => {
         <div className="character__li--article-info">
           <h2 className="character__li--article-info-name">{props.name}</h2>
           <p>{props.species}</p>
+          <DeadOrAlive status={props.status} />
         </div>
       </article>
     </>
