@@ -10,9 +10,10 @@ const FilterByName = (props) => {
     });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="filter__form" onSubmit={handleSubmit}>
       <label htmlFor="searchBox"></label>
       <input
+        className="filter__form--textBox"
         placeholder="Rick"
         id="SearchBox"
         type="text"

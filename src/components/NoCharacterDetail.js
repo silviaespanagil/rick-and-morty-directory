@@ -7,7 +7,7 @@ const NoCharacterDetail = () => {
       <Link to="/">
         <p>Volver</p>
       </Link>
-      <img src={existNot} />
+      <img src={existNot} alt="error 404" />
       <p>This page does not exist...but do we?</p>
     </>
   );

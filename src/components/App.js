@@ -73,8 +73,10 @@ const App = () => {
     <>
       <Switch>
         <Route exact path="/">
-          <Reset reset={handleReset} />
-          <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
+          <div className="filter">
+            <Reset reset={handleReset} />
+            <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
+          </div>
           <CharacterList filterName={FilterName} characters={renderFilter} />
         </Route>
         <Route path="/character/:id" render={renderCharacterDetail} />

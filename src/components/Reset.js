@@ -1,6 +1,6 @@
 const Reset = (props) => {
   return (
-    <button onClick={props.reset} type="button">
+    <button className="filter__resetBut" onClick={props.reset} type="button">
       Reset
     </button>
   );

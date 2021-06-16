@@ -4,12 +4,12 @@ import CharacterCard from "./CharacterCard.js";
 import NoResults from "./NoResults.js";
 
 const CharacterList = (props) => {
-  if (props.characters.length == 0) {
+  if (props.characters.length === 0) {
     return <NoResults filterName={props.filterName} />;
   }
   const character = props.characters.map((character) => {
     return (
-      <li key={character.id}>
+      <li className="character__li" key={character.id}>
         <Link to={`/character/${character.id}`}>
           <CharacterCard
             image={character.image}
@@ -23,7 +23,7 @@ const CharacterList = (props) => {
 
   return (
     <>
-      <ul>{character}</ul>
+      <ul className="character">{character}</ul>
     </>
   );
 };
