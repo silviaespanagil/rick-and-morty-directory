@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import portal from "../images/portal.gif";
 
 const NoResults = (props) => {
   return (
     <>
       <Link to="/">
-        <button onClick={props.reset}>Volver</button>
+        <p>Volver</p>
       </Link>
-      <p>No hay resultados con tu busqueda</p>
+      <img src={portal} alt="Not found" />
+      <p>Ops, {props.filterName} is not in this dimension</p>
     </>
   );
 };

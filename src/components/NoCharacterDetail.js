@@ -1,5 +1,16 @@
+import { Link } from "react-router-dom";
+import existNot from "../images/existNot.gif";
+
 const NoCharacterDetail = () => {
-  return <p>Esto no existe</p>;
+  return (
+    <>
+      <Link to="/">
+        <p>Volver</p>
+      </Link>
+      <img src={existNot} />
+      <p>This page does not exist...but do we?</p>
+    </>
+  );
 };
 
 export default NoCharacterDetail;

@@ -7,7 +7,6 @@ import ls from "../services/LocalStorage.js";
 import CharacterList from "./CharacterList.js";
 import CharacterDetail from "./CharacterDetail.js";
 import NoCharacterDetail from "./NoCharacterDetail.js";
-import NoResults from "./NoResults.js";
 import FilterByName from "./FilterByName.js";
 import Reset from "./Reset.js";
 //STYLESHEETS
@@ -55,10 +54,7 @@ const App = () => {
     return character.name.toUpperCase().includes(FilterName.toUpperCase());
   });
 
-  if (renderFilter.length === 0) {
-    return <NoResults reset={handleReset} />;
-  }
-
+  console.log(FilterName);
   //Detail
   const renderCharacterDetail = (routerProps) => {
     const routerId = routerProps.match.params.id;
@@ -79,7 +75,7 @@ const App = () => {
         <Route exact path="/">
           <Reset reset={handleReset} />
           <FilterByName handleFilter={handleFilter} lsFilter={FilterName} />
-          <CharacterList characters={renderFilter} />
+          <CharacterList filterName={FilterName} characters={renderFilter} />
         </Route>
         <Route path="/character/:id" render={renderCharacterDetail} />
       </Switch>
