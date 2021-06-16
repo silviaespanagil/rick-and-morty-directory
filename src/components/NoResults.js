@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import portal from "../images/portal.gif";
 
 const NoResults = (props) => {

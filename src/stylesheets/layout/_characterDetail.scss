@@ -1,3 +1,34 @@
 .detail {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__back {
+    padding: 15px;
+    align-self: flex-start;
+  }
+  &__article {
+    box-shadow: 5px 5px 10px $colorNeonGreen;
+    border: 2px solid $colorBlue;
+    border-radius: 5px;
+    display: flex;
+    margin: 0 25px;
+    &--info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 25px;
+      &-name {
+        padding-bottom: 20px;
+        font-weight: 200;
+        font-family: $rmFont;
+        letter-spacing: 5px;
+        color: $colorBlue;
+        font-size: 2rem;
+        text-shadow: 1px 2px $colorNeonGreen;
+      }
+      &-all {
+        padding-bottom: 5px;
+      }
+    }
+  }
 }

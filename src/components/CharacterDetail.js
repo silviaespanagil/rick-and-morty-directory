@@ -4,7 +4,7 @@ const CharacterDetail = (props) => {
   return (
     <>
       <div className="detail">
-        <Link to="/">
+        <Link to="/" className="detail__back">
           <p className="detail__back">↩ Volver</p>
         </Link>
         <article className="detail__article">
@@ -13,17 +13,23 @@ const CharacterDetail = (props) => {
             src={props.character.image}
             alt={props.character.name}
           />
-          <h2 className="detail__article--name">{props.character.name}</h2>
-          <p className="detail__article--species">{props.character.species}</p>
-          <p className="detail__article--planet">
-            Comes from {props.character.origin}
-          </p>
-          <p className="detail__article--status">
-            It's {props.character.status}
-          </p>
-          <p className="detail__article--episodes">
-            Has been in {props.character.episode} episodes
-          </p>
+          <div className="detail__article--info">
+            <h2 className="detail__article--info-name">
+              {props.character.name}
+            </h2>
+            <p className="detail__article--info-all">
+              {props.character.species}
+            </p>
+            <p className="detail__article--info-all">
+              Comes from {props.character.origin}
+            </p>
+            <p className="detail__article--info-all">
+              It's {props.character.status}
+            </p>
+            <p className="detail__article--info-all">
+              Has been in {props.character.episode} episodes
+            </p>
+          </div>
         </article>
       </div>
     </>
