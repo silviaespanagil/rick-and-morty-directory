@@ -45,7 +45,7 @@ What a journey! Looks like now  I can create some awesome interactive web apps u
 
 ## Development ⌨️
 
-This time I did a little flowchart of my user behavior just to keep on track of the big picture. After it I started the coding. 
+This time I did a little flowchart of my user behavior just to keep on track of the big picture, if you want to take a look of it [click here (btw it's in Spanish)](https://docs.google.com/drawings/d/1iJRCx4ieJaNdu5ptfl6HETch8AOpyFEgWj_zwv5roVM/edit). After it I started the coding. 
 
 The process went a little bit like this: I went in for the fetch, cleaned it and imported it to my App and then I created my CharacterCard with the fetched information. Then I created my CharacterList that renders the CharacterCards. Afterwards  I coded my searchBox and LocalStorage because we want all this to be kept.
 
