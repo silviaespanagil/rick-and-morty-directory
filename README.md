@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# React evaluation: Rick and Morty Directory
+## _“Wubba Lubba Dub Dub!”_
+¡Hola mundo!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What a journey! Looks like now  I can create some awesome interactive web apps using React✨. This is my React evaluation for Adalab's bootcamp, let's dig in!⛏️
 
-## Available Scripts
+## Initial Requirements 📋
 
-In the project directory, you can run:
+- Create a react app.
+- The app must fetch from an API.
+- Render the characters information on the home page. Required information is: Picture, name and specie.
+- Add a filter that allows the user to search by name any character.
+- There are four mandatory components: Filters, CharacterList, CharacterCard and CharacterDetail.
+- If the user clicks on any character card, a new route must be created that shows the clicked character detail. Detail must show previous information plus origin planet and episodes.
 
-### `npm start`
+## Quality Requirements 🌟
+- Semantic must be right.
+- When the user filters if it press the enter key nothing must happen.
+- If the user search an unexistant character we must give a feedback.
+- The filter must work either if the user writes with caps on or not.
+- When in the character detail if the user wants to go back to the home page the search input value must remain.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Extra features 🔥
+- Add some styles (I apologize on advance, the girl is a developer  but not a designer😬).
+- Use grid for the character list.
+- Make it responsive.
+- Show icons for status and specie.
+- The character URL must be shareable.
+- If we refresh the browser, character information must be kept.
+- If the user goes  to unexistant pages we must give a proper feedback.
+- Order the character list alphabetically.
+- Add an extra filter to search by specie.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## My own extra features 👩‍🎤
+- Add a reset button that resets the filters values
 
-### `npm test`
+## Built with 🔨
+- Visual Code Studio: as code editor
+- SASS
+- React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development ⌨️
 
-### `npm run build`
+This time I did a little flowchart of my user behavior just to keep on track of the big picture. After it I started the coding. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The process went a little bit like this: I went in for the fetch and then I created my CharacterCard with the fetched information. Then I created my CharacterList that renders the CharacterCards. Afterwards  I coded my searchBox and LocalStorage because we want all this to be kept.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+With the creation of my LocalStorage I also changed my fetch because if it's there we don't need to call it back, right?. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Next step was the CharacterDetail and creating all the routes to go to the detail, and go back to the home page. Here I also created my "error" pages and this is  so fun because with the creative liberty I had some fun. I decided to do two components: one for an unexistant page, and another one for an unexistant search.
 
-### `npm run eject`
+With this I had my  mandatory features. For the bonus I added a new component for a second filter and a "Filters" component that houses both of my filters. I also did two extra components for the cards icons that looks for the information and render the correspondent icon.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For my styles I installed SASS and using BEM tried to make it look cute and from another galaxy.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Want to clone my repository? 🐑🐑
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Go for it! And if you make something pretty, please show me
 
-## Learn More
+## Do you have any idea? ✏️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I'm an student and as I stated before am learning a whole lot of Front End Developing, so, if  you have any idea that I could develope please tell me so and I will try to.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
