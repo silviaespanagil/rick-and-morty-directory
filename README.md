@@ -4,6 +4,10 @@
 
 What a journey! Looks like now  I can create some awesome interactive web apps using React✨. This is my React evaluation for Adalab's bootcamp, let's dig in!⛏️
 
+<img src="https://user-images.githubusercontent.com/81619759/122358191-b5d88300-cf54-11eb-9261-3359076e6d5b.png" width="400"/>  <img src="https://user-images.githubusercontent.com/81619759/122358585-0fd94880-cf55-11eb-9a1f-7bc2dc9f6864.png" width="400"/>
+
+
+
 ## Initial Requirements 📋
 
 - Create a react app.
@@ -43,7 +47,7 @@ What a journey! Looks like now  I can create some awesome interactive web apps u
 
 This time I did a little flowchart of my user behavior just to keep on track of the big picture. After it I started the coding. 
 
-The process went a little bit like this: I went in for the fetch and then I created my CharacterCard with the fetched information. Then I created my CharacterList that renders the CharacterCards. Afterwards  I coded my searchBox and LocalStorage because we want all this to be kept.
+The process went a little bit like this: I went in for the fetch, cleaned it and imported it to my App and then I created my CharacterCard with the fetched information. Then I created my CharacterList that renders the CharacterCards. Afterwards  I coded my searchBox and LocalStorage because we want all this to be kept.
 
 With the creation of my LocalStorage I also changed my fetch because if it's there we don't need to call it back, right?. 
 
