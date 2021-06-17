@@ -13,4 +13,9 @@
     width: 25px;
     margin-bottom: 50px;
   }
+  &__link {
+    &:hover {
+      color: $colorNeonGreen;
+    }
+  }
 }
