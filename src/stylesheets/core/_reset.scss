@@ -16,6 +16,8 @@ body {
   background-color: $colorBlack;
 }
 #root {
+  height: 100vh;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
   align-items: center;

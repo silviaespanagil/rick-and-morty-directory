@@ -1,13 +1,16 @@
 .footer {
-  border-top: 2px dotted $colorDarkBlue;
-  margin-top: 50px;
-  padding-right: 25px;
   width: 96vw;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  @include tablet() {
+    justify-content: flex-end;
+    padding-right: 25px;
+  }
   &__img {
+    margin-top: 50px;
     width: 25px;
+    margin-bottom: 50px;
   }
 }

@@ -4,7 +4,9 @@
   align-items: center;
   &__back {
     padding: 15px;
-    align-self: flex-start;
+    @include tablet() {
+      align-self: flex-start;
+    }
   }
   &__article {
     box-shadow: 5px 5px 10px $colorNeonGreen;
@@ -12,6 +14,20 @@
     border-radius: 5px;
     display: flex;
     margin: 0 25px;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    @include tablet() {
+      flex-direction: row;
+      width: auto;
+    }
+
+    &--img {
+      width: 246px;
+      @include tablet() {
+        width: auto;
+      }
+    }
     &--info {
       display: flex;
       flex-direction: column;
