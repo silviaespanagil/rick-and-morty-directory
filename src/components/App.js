@@ -87,7 +87,6 @@ const App = () => {
       (character) => character.id === parseInt(routerId)
     );
     if (characterFound) {
-      console.log(characterFound);
       return <CharacterDetail character={characterFound} />;
     } else {
       return <NoCharacterDetail />;

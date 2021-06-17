@@ -6,7 +6,7 @@ const CharacterDetail = (props) => {
     <>
       <div className="detail">
         <Link to="/" className="detail__back">
-          <p className="detail__back">↩ Volver</p>
+          <p className="detail__back">↩ Back</p>
         </Link>
         <article className="detail__article">
           <img

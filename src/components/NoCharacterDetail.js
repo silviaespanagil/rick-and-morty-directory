@@ -5,7 +5,7 @@ const NoCharacterDetail = () => {
   return (
     <>
       <Link to="/">
-        <p className="noCharacterBack">↩ Volver</p>
+        <p className="noCharacterBack">↩ Back</p>
       </Link>
       <div className="noCharacter">
         <p className="noCharacter__text">

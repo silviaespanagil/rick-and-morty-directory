@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.3c3a3bcd.chunk.css",
+    "main.css": "./static/css/main.65d704b4.chunk.css",
     "main.js": "./static/js/main.1e7ceff8.chunk.js",
     "main.js.map": "./static/js/main.1e7ceff8.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.361fce3d.js",
@@ -8,7 +8,7 @@
     "static/js/2.264793de.chunk.js": "./static/js/2.264793de.chunk.js",
     "static/js/2.264793de.chunk.js.map": "./static/js/2.264793de.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.3c3a3bcd.chunk.css.map": "./static/css/main.3c3a3bcd.chunk.css.map",
+    "static/css/main.65d704b4.chunk.css.map": "./static/css/main.65d704b4.chunk.css.map",
     "static/js/2.264793de.chunk.js.LICENSE.txt": "./static/js/2.264793de.chunk.js.LICENSE.txt",
     "static/media/RickAndMorty.1f3156d3.png": "./static/media/RickAndMorty.1f3156d3.png",
     "static/media/existNot.2b0fa255.gif": "./static/media/existNot.2b0fa255.gif",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.361fce3d.js",
     "static/js/2.264793de.chunk.js",
-    "static/css/main.3c3a3bcd.chunk.css",
+    "static/css/main.65d704b4.chunk.css",
     "static/js/main.1e7ceff8.chunk.js"
   ]
 }
