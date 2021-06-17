@@ -1,10 +1,14 @@
 .filter {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   padding: 25px 0 10px 25px;
   width: 100%;
+
+  @include tablet() {
+    flex-direction: row-reverse;
+  }
   &__resetBut {
     font-weight: bold;
     color: $colorBlack;
@@ -24,8 +28,14 @@
     }
   }
   &__form {
+    display: flex;
+    flex-direction: column;
+    @include tablet() {
+      flex-direction: row;
+    }
     &--textBox {
       font-weight: bold;
+      margin-bottom: 20px;
       padding: 10px;
       background-color: $colorBlack;
       color: $colorWhite;
@@ -35,17 +45,26 @@
       height: 40px;
       @include tablet() {
         width: 500px;
+        margin-bottom: 0;
       }
     }
     &--species {
-      padding: 0 15px;
+      margin-bottom: 5px;
+      @include tablet() {
+        margin-bottom: 0;
+        padding: 0 15px;
+      }
     }
     &--select {
+      margin-bottom: 20px;
       background-color: $colorBlack;
       font-size: 1rem;
       height: 40px;
       border-right: 2px dotted $colorBlue;
       border-bottom: 2px dotted $colorBlue;
+      @include tablet() {
+        margin-bottom: 0;
+      }
     }
   }
 }
