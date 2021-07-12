@@ -1,8 +1,8 @@
-# React evaluation: Rick and Morty Directory
+# React app: Rick and Morty Directory
 ## _“Wubba Lubba Dub Dub!”_
 ¡Hola mundo!
 
-What a journey! Looks like now  I can create some awesome interactive web apps using React✨. This is my React evaluation for Adalab's bootcamp, let's dig in!⛏️
+What a journey! Looks like now  I can create some awesome interactive web apps using React✨. This is my new React App where you can search and read some information about some Rick and Morty characters.
 
 <img src="https://user-images.githubusercontent.com/81619759/122358191-b5d88300-cf54-11eb-9261-3359076e6d5b.png" width="400"/>  <img src="https://user-images.githubusercontent.com/81619759/122358585-0fd94880-cf55-11eb-9a1f-7bc2dc9f6864.png" width="400"/>
 
