@@ -69,3 +69,6 @@ I'm an student and as I stated before am learning a whole lot of Front End Devel
 ## License
 
 MIT
+
+## Codefactor
+[![CodeFactor](https://www.codefactor.io/repository/github/silviaespanagil/rick-and-morty-directory/badge)](https://www.codefactor.io/repository/github/silviaespanagil/rick-and-morty-directory)
